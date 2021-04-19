@@ -8,17 +8,9 @@
 import ReactorKit
 
 final class MainViewReactor: Reactor {
-    enum Action {
-        
-    }
+    typealias Action = NoAction
     
-    enum Mutation {
-        
-    }
-    
-    struct State {
-        
-    }
+    struct State {}
     
     let initialState: State
     
