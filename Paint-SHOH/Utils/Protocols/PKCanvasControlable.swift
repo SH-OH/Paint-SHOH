@@ -10,11 +10,19 @@ import UIKit
 import PencilKit
 import Then
 
-protocol PKCanvasControlable: PKCanvas {
+protocol PKCanvasControlable: class {
+    var backgroundView: UIImageView { get }
     var canvasView: PKCanvasView { get }
 }
 
 extension PKCanvasControlable {
+    static func initBackgroundView() -> UIImageView {
+        return UIImageView().then {
+            $0.contentMode = .scaleAspectFill
+            $0.clipsToBounds = true
+        }
+    }
+    
     static func initCanvas() -> PKCanvasView {
         return PKCanvasView().then {
             $0.tool = PKInkingTool(.pen, color: .black, width: 10)
@@ -33,8 +41,8 @@ extension PKCanvasControlable {
     }
     
     func add(_ presentViewController: BaseViewController) {
-        self._add(presentViewController) { (image) in
-            self.image = image
+        self._add(presentViewController) { [weak backgroundView] (image) in
+            backgroundView?.image = image
         }
     }
     

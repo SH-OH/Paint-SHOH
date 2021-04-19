@@ -7,19 +7,25 @@
 
 import PencilKit
 
-final class PKCanvas: UIImageView, PKCanvasControlable {
+final class PKCanvas: UIView, PKCanvasControlable {
+    let backgroundView = PKCanvas.initBackgroundView()
     let canvasView = PKCanvas.initCanvas()
     
     func setup() {
-        contentMode = .scaleAspectFill
-        backgroundColor = .blue
-        clipsToBounds = true
         canvasView.delegate = self
-        setupCanvasView()
+        setupView()
+        setupLayout()
     }
     
-    private func setupCanvasView() {
+    private func setupView() {
+        self.addSubview(backgroundView)
         self.addSubview(canvasView)
+    }
+    
+    private func setupLayout() {
+        backgroundView.snp.makeConstraints { (m) in
+            m.edges.equalToSuperview()
+        }
         canvasView.snp.makeConstraints { (m) in
             m.edges.equalToSuperview()
         }
