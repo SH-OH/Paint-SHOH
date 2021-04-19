@@ -1,0 +1,59 @@
+PODS:
+  - ReactorKit (3.0.0):
+    - RxSwift (~> 6.0)
+    - WeakMapTable (~> 1.1)
+  - RxCocoa (6.1.0):
+    - RxRelay (= 6.1.0)
+    - RxSwift (= 6.1.0)
+  - RxExpect (2.0.0):
+    - RxCocoa (~> 6.1)
+    - RxSwift (~> 6.1)
+    - RxTest (~> 6.1)
+  - RxRelay (6.1.0):
+    - RxSwift (= 6.1.0)
+  - RxSwift (6.1.0)
+  - RxTest (6.1.0):
+    - RxSwift (= 6.1.0)
+  - Then (2.7.0)
+  - WeakMapTable (1.2.0)
+
+DEPENDENCIES:
+  - ReactorKit (~> 3.0)
+  - RxCocoa (~> 6.1.0)
+  - RxExpect (from `https://github.com/SH-OH/RxExpect.git`, branch `develop`)
+  - RxSwift (~> 6.1.0)
+  - Then
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ReactorKit
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - Then
+    - WeakMapTable
+
+EXTERNAL SOURCES:
+  RxExpect:
+    :branch: develop
+    :git: https://github.com/SH-OH/RxExpect.git
+
+CHECKOUT OPTIONS:
+  RxExpect:
+    :commit: 093260c400751e3cbae9e3a6186b930e183f9dc4
+    :git: https://github.com/SH-OH/RxExpect.git
+
+SPEC CHECKSUMS:
+  ReactorKit: 5348c9881dcb546605b451e32759dccc9937d36e
+  RxCocoa: 5c51f02d562cbd94629f6c26cf0c80fe4ab8d343
+  RxExpect: 0a0e5a8c5bbd042d892a4bc653f3484395605886
+  RxRelay: 483e1a19fad961b41f0b0c0bee506f46c1ae14fe
+  RxSwift: a834e5c538e89eca0cae86f403f4fbf0336786ce
+  RxTest: 9d26616eaff4a7e75f4ecae9b2c24840f2e8218d
+  Then: acfe0be7e98221c6204e12f8161459606d5d822d
+  WeakMapTable: 05c694ce8439a7a9ebabb56187287a63c57673d6
+
+PODFILE CHECKSUM: cab6ad6b1cf5d5870b93fbd1825fd06888f0d0dd
+
+COCOAPODS: 1.10.1
