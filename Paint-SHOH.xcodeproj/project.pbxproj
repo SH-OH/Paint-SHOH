@@ -14,7 +14,6 @@
 		CB3F0CB1262D2FE500D6CEA3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CB0262D2FE500D6CEA3 /* MainViewController.swift */; };
 		CB3F0CB6262D2FE500D6CEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0CB5262D2FE500D6CEA3 /* Assets.xcassets */; };
 		CB3F0CB9262D2FE500D6CEA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0CB7262D2FE500D6CEA3 /* LaunchScreen.storyboard */; };
-		CB3F0CC4262D2FE600D6CEA3 /* Paint_SHOHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CC3262D2FE600D6CEA3 /* Paint_SHOHTests.swift */; };
 		CB3F0CCF262D2FE600D6CEA3 /* Paint_SHOHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CCE262D2FE600D6CEA3 /* Paint_SHOHUITests.swift */; };
 		CB3F0D1D262D34B100D6CEA3 /* SPMSHOHProxy in Frameworks */ = {isa = PBXBuildFile; productRef = CB3F0D1C262D34B100D6CEA3 /* SPMSHOHProxy */; };
 		CB3F0D2D262D354200D6CEA3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D2C262D354200D6CEA3 /* AppCoordinator.swift */; };
@@ -31,6 +30,7 @@
 		CBE62FBB262D95B10019EF41 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62FBA262D95B10019EF41 /* ImagePicker.swift */; };
 		CBE62FD1262DDB800019EF41 /* CanvasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62FD0262DDB800019EF41 /* CanvasModel.swift */; };
 		CBE62FD9262E035A0019EF41 /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62FD8262E03590019EF41 /* MainViewReactor.swift */; };
+		CBE62FE2262E04A10019EF41 /* PKCanvasControlableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62FE1262E04A10019EF41 /* PKCanvasControlableTests.swift */; };
 		DF57839A67713E63FABE3534 /* Pods_Paint_SHOHTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5A7D1042465961C449243D /* Pods_Paint_SHOHTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,7 +67,6 @@
 		CB3F0CB8262D2FE500D6CEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB3F0CBA262D2FE500D6CEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB3F0CBF262D2FE600D6CEA3 /* Paint-SHOHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paint-SHOHTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB3F0CC3262D2FE600D6CEA3 /* Paint_SHOHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_SHOHTests.swift; sourceTree = "<group>"; };
 		CB3F0CC5262D2FE600D6CEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB3F0CCA262D2FE600D6CEA3 /* Paint-SHOHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paint-SHOHUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3F0CCE262D2FE600D6CEA3 /* Paint_SHOHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_SHOHUITests.swift; sourceTree = "<group>"; };
@@ -86,6 +85,7 @@
 		CBE62FBA262D95B10019EF41 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		CBE62FD0262DDB800019EF41 /* CanvasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModel.swift; sourceTree = "<group>"; };
 		CBE62FD8262E03590019EF41 /* MainViewReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
+		CBE62FE1262E04A10019EF41 /* PKCanvasControlableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvasControlableTests.swift; sourceTree = "<group>"; };
 		CC10C82B15A92A4A960C047F /* Pods_Paint_SHOHUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paint_SHOHUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFD66AC39DF341F03184DE /* Pods-Paint-SHOHUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paint-SHOHUITests.debug.xcconfig"; path = "Target Support Files/Pods-Paint-SHOHUITests/Pods-Paint-SHOHUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,7 +178,7 @@
 		CB3F0CC2262D2FE600D6CEA3 /* Paint-SHOHTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB3F0CC3262D2FE600D6CEA3 /* Paint_SHOHTests.swift */,
+				CBE62FE0262E04880019EF41 /* Control */,
 				CB3F0CC5262D2FE600D6CEA3 /* Info.plist */,
 			);
 			path = "Paint-SHOHTests";
@@ -311,6 +311,14 @@
 				CBE62FD0262DDB800019EF41 /* CanvasModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CBE62FE0262E04880019EF41 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				CBE62FE1262E04A10019EF41 /* PKCanvasControlableTests.swift */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -598,7 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3F0CC4262D2FE600D6CEA3 /* Paint_SHOHTests.swift in Sources */,
+				CBE62FE2262E04A10019EF41 /* PKCanvasControlableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

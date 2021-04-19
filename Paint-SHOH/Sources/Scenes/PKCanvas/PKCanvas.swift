@@ -12,6 +12,7 @@ final class PKCanvas: UIView, PKCanvasControlable {
     let canvasView = PKCanvas.initCanvas()
     var cacheDrawing: PKDrawing?
     var presentViewController: BaseViewController?
+    let isStub: Bool = false
     
     func setup(_ presentViewController: BaseViewController) {
         self.presentViewController = presentViewController

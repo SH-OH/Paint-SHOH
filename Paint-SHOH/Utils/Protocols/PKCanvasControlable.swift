@@ -15,6 +15,7 @@ protocol PKCanvasControlable: class {
     var backgroundView: UIImageView { get }
     var canvasView: PKCanvasView { get }
     var cacheDrawing: PKDrawing? { get set }
+    var isStub: Bool { get }
 }
 
 extension PKCanvasControlable {
@@ -125,11 +126,14 @@ extension PKCanvasControlable {
         return PKEraserTool(.bitmap)
     }
     private var _directoryUrl: URL? {
-        let urls = FileManager.default.urls(
-            for: .documentDirectory,
-            in: .userDomainMask
-        )
-        return urls.first?.appendingPathComponent("PKCanvasControlable.data")
+        if !self.isStub {
+            let urls = FileManager.default.urls(
+                for: .documentDirectory,
+                in: .userDomainMask
+            )
+            return urls.first?.appendingPathComponent("PKCanvasControlable.data")
+        }
+        return FileManager.default.temporaryDirectory
     }
     private var queue: DispatchQueue {
         return DispatchQueue(
@@ -194,6 +198,7 @@ extension PKCanvasControlable {
     
     private func _alert() {
         guard let presentViewController = self.presentViewController else { return }
+        
         DispatchQueue.main.async {
             let alert = UIAlertController(
                 title: "저장된 그림이 없습니다.",
