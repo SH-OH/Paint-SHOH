@@ -7,7 +7,11 @@
 
 import UIKit
 
-final class MainCoordinator: Coordinator {
+protocol MainFlow: class {
+    func coordinateToNextAny()
+}
+
+final class MainCoordinator: Coordinator, MainFlow {
     
     private unowned var navigationController: BaseNavigationController
     
@@ -16,10 +20,17 @@ final class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let mainVC = MainViewController()
+        let reactor = MainViewReactor()
+        let mainVC = MainViewController.storyboard()
+        mainVC.reactor = reactor
+        mainVC.coordinator = self
         navigationController.setViewControllers(
             [mainVC],
             animated: false
         )
+    }
+    
+    func coordinateToNextAny() {
+        print(#function)
     }
 }
