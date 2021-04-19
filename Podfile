@@ -14,12 +14,17 @@ def rx_pods
   pod 'RxCocoa', '~> 6.1.0'
 end
 
+def ui_pods
+  pod 'SnapKit'
+end
+
 def test_pods
   pod 'RxExpect', :git => 'https://github.com/SH-OH/RxExpect.git', :branch => 'develop'
 end
 
 target 'Paint-SHOH' do
     default_pods
+    ui_pods
 end
 
 target 'Paint-SHOHTests' do

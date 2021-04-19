@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,12 +11,24 @@
 		6F1B69B3BC87CB4DC293F5AA /* Pods_Paint_SHOH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DB63F2C87879B101B20308 /* Pods_Paint_SHOH.framework */; };
 		CB3F0CAD262D2FE500D6CEA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CAC262D2FE500D6CEA3 /* AppDelegate.swift */; };
 		CB3F0CAF262D2FE500D6CEA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CAE262D2FE500D6CEA3 /* SceneDelegate.swift */; };
-		CB3F0CB1262D2FE500D6CEA3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CB0262D2FE500D6CEA3 /* ViewController.swift */; };
-		CB3F0CB4262D2FE500D6CEA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0CB2262D2FE500D6CEA3 /* Main.storyboard */; };
+		CB3F0CB1262D2FE500D6CEA3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CB0262D2FE500D6CEA3 /* MainViewController.swift */; };
 		CB3F0CB6262D2FE500D6CEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0CB5262D2FE500D6CEA3 /* Assets.xcassets */; };
 		CB3F0CB9262D2FE500D6CEA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0CB7262D2FE500D6CEA3 /* LaunchScreen.storyboard */; };
 		CB3F0CC4262D2FE600D6CEA3 /* Paint_SHOHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CC3262D2FE600D6CEA3 /* Paint_SHOHTests.swift */; };
 		CB3F0CCF262D2FE600D6CEA3 /* Paint_SHOHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CCE262D2FE600D6CEA3 /* Paint_SHOHUITests.swift */; };
+		CB3F0D1D262D34B100D6CEA3 /* SPMSHOHProxy in Frameworks */ = {isa = PBXBuildFile; productRef = CB3F0D1C262D34B100D6CEA3 /* SPMSHOHProxy */; };
+		CB3F0D2D262D354200D6CEA3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D2C262D354200D6CEA3 /* AppCoordinator.swift */; };
+		CB3F0D3A262D37DC00D6CEA3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D34262D357000D6CEA3 /* Coordinator.swift */; };
+		CB3F0D3E262D37EF00D6CEA3 /* ObservableType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D36262D357E00D6CEA3 /* ObservableType+Extensions.swift */; };
+		CB3F0D47262D382000D6CEA3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D43262D380F00D6CEA3 /* BaseViewController.swift */; };
+		CB3F0D56262D38B400D6CEA3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D55262D38B400D6CEA3 /* MainCoordinator.swift */; };
+		CB3F0D5E262D3A2100D6CEA3 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D5D262D3A2100D6CEA3 /* BaseNavigationController.swift */; };
+		CB3F0D67262D3B2900D6CEA3 /* ControlHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D66262D3B2900D6CEA3 /* ControlHeaderView.swift */; };
+		CB3F0D6D262D3CB200D6CEA3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D6C262D3CB200D6CEA3 /* CanvasView.swift */; };
+		CB3F0D75262D3CC500D6CEA3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D74262D3CC500D6CEA3 /* BaseView.swift */; };
+		CB3F0D8B262D3F7400D6CEA3 /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0D8A262D3F7400D6CEA3 /* CanvasView.xib */; };
+		CBE62F49262D50D10019EF41 /* ControlHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE62F48262D50D10019EF41 /* ControlHeaderView.xib */; };
+		CBE62F4E262D568B0019EF41 /* IBClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62F4D262D568B0019EF41 /* IBClass.swift */; };
 		DF57839A67713E63FABE3534 /* Pods_Paint_SHOHTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5A7D1042465961C449243D /* Pods_Paint_SHOHTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,8 +60,7 @@
 		CB3F0CA9262D2FE500D6CEA3 /* Paint-SHOH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Paint-SHOH.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3F0CAC262D2FE500D6CEA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CB3F0CAE262D2FE500D6CEA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CB3F0CB0262D2FE500D6CEA3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CB3F0CB3262D2FE500D6CEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CB3F0CB0262D2FE500D6CEA3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		CB3F0CB5262D2FE500D6CEA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB3F0CB8262D2FE500D6CEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB3F0CBA262D2FE500D6CEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +70,18 @@
 		CB3F0CCA262D2FE600D6CEA3 /* Paint-SHOHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paint-SHOHUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3F0CCE262D2FE600D6CEA3 /* Paint_SHOHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_SHOHUITests.swift; sourceTree = "<group>"; };
 		CB3F0CD0262D2FE600D6CEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB3F0D2C262D354200D6CEA3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		CB3F0D34262D357000D6CEA3 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CB3F0D36262D357E00D6CEA3 /* ObservableType+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Extensions.swift"; sourceTree = "<group>"; };
+		CB3F0D43262D380F00D6CEA3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		CB3F0D55262D38B400D6CEA3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		CB3F0D5D262D3A2100D6CEA3 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		CB3F0D66262D3B2900D6CEA3 /* ControlHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlHeaderView.swift; sourceTree = "<group>"; };
+		CB3F0D6C262D3CB200D6CEA3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		CB3F0D74262D3CC500D6CEA3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		CB3F0D8A262D3F7400D6CEA3 /* CanvasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
+		CBE62F48262D50D10019EF41 /* ControlHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlHeaderView.xib; sourceTree = "<group>"; };
+		CBE62F4D262D568B0019EF41 /* IBClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBClass.swift; sourceTree = "<group>"; };
 		CC10C82B15A92A4A960C047F /* Pods_Paint_SHOHUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paint_SHOHUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFD66AC39DF341F03184DE /* Pods-Paint-SHOHUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paint-SHOHUITests.debug.xcconfig"; path = "Target Support Files/Pods-Paint-SHOHUITests/Pods-Paint-SHOHUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB3F0D1D262D34B100D6CEA3 /* SPMSHOHProxy in Frameworks */,
 				6F1B69B3BC87CB4DC293F5AA /* Pods_Paint_SHOH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,13 +163,10 @@
 		CB3F0CAB262D2FE500D6CEA3 /* Paint-SHOH */ = {
 			isa = PBXGroup;
 			children = (
-				CB3F0CAC262D2FE500D6CEA3 /* AppDelegate.swift */,
-				CB3F0CAE262D2FE500D6CEA3 /* SceneDelegate.swift */,
-				CB3F0CB0262D2FE500D6CEA3 /* ViewController.swift */,
-				CB3F0CB2262D2FE500D6CEA3 /* Main.storyboard */,
-				CB3F0CB5262D2FE500D6CEA3 /* Assets.xcassets */,
-				CB3F0CB7262D2FE500D6CEA3 /* LaunchScreen.storyboard */,
 				CB3F0CBA262D2FE500D6CEA3 /* Info.plist */,
+				CB3F0D22262D34E900D6CEA3 /* Resources */,
+				CB3F0D23262D34ED00D6CEA3 /* Sources */,
+				CB3F0D32262D355B00D6CEA3 /* Utils */,
 			);
 			path = "Paint-SHOH";
 			sourceTree = "<group>";
@@ -168,6 +189,116 @@
 			path = "Paint-SHOHUITests";
 			sourceTree = "<group>";
 		};
+		CB3F0D21262D34E600D6CEA3 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0CAC262D2FE500D6CEA3 /* AppDelegate.swift */,
+				CB3F0D2C262D354200D6CEA3 /* AppCoordinator.swift */,
+				CB3F0CAE262D2FE500D6CEA3 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		CB3F0D22262D34E900D6CEA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0CB5262D2FE500D6CEA3 /* Assets.xcassets */,
+				CB3F0CB7262D2FE500D6CEA3 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CB3F0D23262D34ED00D6CEA3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D21262D34E600D6CEA3 /* App */,
+				CB3F0D25262D350B00D6CEA3 /* Domain */,
+				CB3F0D24262D350400D6CEA3 /* Scenes */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		CB3F0D24262D350400D6CEA3 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D42262D380A00D6CEA3 /* Base */,
+				CB3F0D6B262D3B7000D6CEA3 /* Canvas */,
+				CB3F0D65262D3AF000D6CEA3 /* ControlHeader */,
+				CB3F0D4B262D383900D6CEA3 /* Main */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CB3F0D25262D350B00D6CEA3 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CB3F0D32262D355B00D6CEA3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D35262D357800D6CEA3 /* Extensions */,
+				CB3F0D33262D356400D6CEA3 /* Protocols */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		CB3F0D33262D356400D6CEA3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D34262D357000D6CEA3 /* Coordinator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CB3F0D35262D357800D6CEA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D36262D357E00D6CEA3 /* ObservableType+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CB3F0D42262D380A00D6CEA3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D5D262D3A2100D6CEA3 /* BaseNavigationController.swift */,
+				CB3F0D74262D3CC500D6CEA3 /* BaseView.swift */,
+				CB3F0D43262D380F00D6CEA3 /* BaseViewController.swift */,
+				CBE62F4D262D568B0019EF41 /* IBClass.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		CB3F0D4B262D383900D6CEA3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D55262D38B400D6CEA3 /* MainCoordinator.swift */,
+				CB3F0CB0262D2FE500D6CEA3 /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CB3F0D65262D3AF000D6CEA3 /* ControlHeader */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D66262D3B2900D6CEA3 /* ControlHeaderView.swift */,
+				CBE62F48262D50D10019EF41 /* ControlHeaderView.xib */,
+			);
+			path = ControlHeader;
+			sourceTree = "<group>";
+		};
+		CB3F0D6B262D3B7000D6CEA3 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				CB3F0D6C262D3CB200D6CEA3 /* CanvasView.swift */,
+				CB3F0D8A262D3F7400D6CEA3 /* CanvasView.xib */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +317,9 @@
 			dependencies = (
 			);
 			name = "Paint-SHOH";
+			packageProductDependencies = (
+				CB3F0D1C262D34B100D6CEA3 /* SPMSHOHProxy */,
+			);
 			productName = "Paint-SHOH";
 			productReference = CB3F0CA9262D2FE500D6CEA3 /* Paint-SHOH.app */;
 			productType = "com.apple.product-type.application";
@@ -261,6 +395,9 @@
 				Base,
 			);
 			mainGroup = CB3F0CA0262D2FE500D6CEA3;
+			packageReferences = (
+				CB3F0D1B262D34B100D6CEA3 /* XCRemoteSwiftPackageReference "SPMSHOHProxy" */,
+			);
 			productRefGroup = CB3F0CAA262D2FE500D6CEA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -279,7 +416,8 @@
 			files = (
 				CB3F0CB9262D2FE500D6CEA3 /* LaunchScreen.storyboard in Resources */,
 				CB3F0CB6262D2FE500D6CEA3 /* Assets.xcassets in Resources */,
-				CB3F0CB4262D2FE500D6CEA3 /* Main.storyboard in Resources */,
+				CB3F0D8B262D3F7400D6CEA3 /* CanvasView.xib in Resources */,
+				CBE62F49262D50D10019EF41 /* ControlHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,8 +562,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3F0CB1262D2FE500D6CEA3 /* ViewController.swift in Sources */,
+				CB3F0D2D262D354200D6CEA3 /* AppCoordinator.swift in Sources */,
+				CB3F0D56262D38B400D6CEA3 /* MainCoordinator.swift in Sources */,
+				CB3F0CB1262D2FE500D6CEA3 /* MainViewController.swift in Sources */,
+				CB3F0D75262D3CC500D6CEA3 /* BaseView.swift in Sources */,
+				CB3F0D3E262D37EF00D6CEA3 /* ObservableType+Extensions.swift in Sources */,
+				CB3F0D3A262D37DC00D6CEA3 /* Coordinator.swift in Sources */,
+				CB3F0D5E262D3A2100D6CEA3 /* BaseNavigationController.swift in Sources */,
 				CB3F0CAD262D2FE500D6CEA3 /* AppDelegate.swift in Sources */,
+				CB3F0D67262D3B2900D6CEA3 /* ControlHeaderView.swift in Sources */,
+				CBE62F4E262D568B0019EF41 /* IBClass.swift in Sources */,
+				CB3F0D6D262D3CB200D6CEA3 /* CanvasView.swift in Sources */,
+				CB3F0D47262D382000D6CEA3 /* BaseViewController.swift in Sources */,
 				CB3F0CAF262D2FE500D6CEA3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -462,14 +610,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CB3F0CB2262D2FE500D6CEA3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CB3F0CB3262D2FE500D6CEA3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CB3F0CB7262D2FE500D6CEA3 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -533,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -589,7 +729,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -769,6 +909,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CB3F0D1B262D34B100D6CEA3 /* XCRemoteSwiftPackageReference "SPMSHOHProxy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SH-OH/SPMSHOHProxy.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CB3F0D1C262D34B100D6CEA3 /* SPMSHOHProxy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CB3F0D1B262D34B100D6CEA3 /* XCRemoteSwiftPackageReference "SPMSHOHProxy" */;
+			productName = SPMSHOHProxy;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CB3F0CA1262D2FE500D6CEA3 /* Project object */;
 }
