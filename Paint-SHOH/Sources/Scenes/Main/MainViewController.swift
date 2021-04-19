@@ -27,7 +27,7 @@ final class MainViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        canvasView.setup()
+        canvasView.setup(self)
     }
     
 }
@@ -37,33 +37,35 @@ final class MainViewController: BaseViewController {
 extension MainViewController: StoryboardView {
     func bind(reactor: MainViewReactor) {
         saveBtn.rx.tap
-            .bind { (_) in
-                self.canvasView.save()
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { [weak canvasView] (_) in
+                canvasView?.save()
+            }).disposed(by: disposeBag)
         loadBtn.rx.tap
-            .bind { (_) in
-                self.canvasView.load()
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { [weak canvasView] (_) in
+                canvasView?.load()
+            }).disposed(by: disposeBag)
         addBtn.rx.tap
-            .bind { (_) in
-                self.canvasView.add(self)
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { [weak canvasView] (_) in
+                canvasView?.add()
+            }).disposed(by: disposeBag)
         undoBtn.rx.tap
-            .bind { (_) in
-                self.canvasView.undo()
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { [weak canvasView] (_) in
+                canvasView?.undo()
+            }).disposed(by: disposeBag)
         redoBtn.rx.tap
-            .bind { (_) in
-                self.canvasView.redo()
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { [weak canvasView] (_) in
+                canvasView?.redo()
+            }).disposed(by: disposeBag)
         penBtn.rx.tap
-            .bind { (_) in
-                self.canvasView.pen()
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { [weak canvasView] (_) in
+                canvasView?.pen()
+            }).disposed(by: disposeBag)
         eraseBtn.rx.tap
-            .bind { (_) in
-                self.canvasView.erase()
-                self.coordinator?.coordinateToNextAny()
-            }.disposed(by: disposeBag)
+            .subscribe(onNext: { [
+                weak canvasView, weak coordinator
+            ] (_) in
+                canvasView?.erase()
+                coordinator?.coordinateToNextAny()
+            }).disposed(by: disposeBag)
     }
 }

@@ -10,9 +10,12 @@ import PencilKit
 final class PKCanvas: UIView, PKCanvasControlable {
     let backgroundView = PKCanvas.initBackgroundView()
     let canvasView = PKCanvas.initCanvas()
+    var cacheDrawing: PKDrawing?
+    var presentViewController: BaseViewController?
     
-    func setup() {
-        canvasView.delegate = self
+    func setup(_ presentViewController: BaseViewController) {
+        self.presentViewController = presentViewController
+        
         setupView()
         setupLayout()
     }
@@ -29,22 +32,5 @@ final class PKCanvas: UIView, PKCanvasControlable {
         canvasView.snp.makeConstraints { (m) in
             m.edges.equalToSuperview()
         }
-    }
-}
-
-// MARK: - PKCanvasViewDelegate
-
-extension PKCanvas: PKCanvasViewDelegate {
-    func canvasViewDrawingDidChange(_ canvasView: PKCanvasView) {
-        print(#function)
-    }
-    func canvasViewDidFinishRendering(_ canvasView: PKCanvasView) {
-        print(#function)
-    }
-    func canvasViewDidEndUsingTool(_ canvasView: PKCanvasView) {
-        print(#function)
-    }
-    func canvasViewDidBeginUsingTool(_ canvasView: PKCanvasView) {
-        print(#function)
     }
 }
