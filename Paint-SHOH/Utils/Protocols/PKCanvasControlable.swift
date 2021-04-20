@@ -161,7 +161,6 @@ extension PKCanvasControlable {
     
     private func setUndoCanvas(_ newDrawing: PKDrawing) {
         guard let undoManager = undoManager else { return }
-        guard undoManager.canUndo else { return }
         
         let oldDrawing = canvasView.drawing
         undoManager.registerUndo(withTarget: self, handler: { (controlable) in
