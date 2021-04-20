@@ -10,15 +10,17 @@ import PencilKit
 import Then
 import SPMSHOHProxy
 
-protocol PKCanvasControlable: class {
+protocol PKCanvasControlable: UIView {
     var presentViewController: BaseViewController? { get }
     var backgroundView: UIImageView { get }
     var canvasView: PKCanvasView { get }
-    var cacheDrawing: PKDrawing? { get set }
     var isStub: Bool { get }
 }
 
 extension PKCanvasControlable {
+    
+    // MARK: - Init Method
+    
     static func initBackgroundView() -> UIImageView {
         return UIImageView().then {
             $0.contentMode = .scaleAspectFill
@@ -35,17 +37,17 @@ extension PKCanvasControlable {
         }
     }
     
+    // MARK: - Control Method
+    
     func save() {
         let drawing = canvasView.drawing
-        guard !drawing.bounds.isEmpty,
-              cacheDrawing != drawing else {
+        guard !drawing.bounds.isEmpty else {
             return
         }
         
-        guard let url = _directoryUrl else { return }
-        
+        guard let url = directoryUrl else { return }
+        let imageData = self.backgroundView.image?.jpegData(compressionQuality: 1.0)
         queue.async {
-            let imageData = self.backgroundView.image?.jpegData(compressionQuality: 1.0)
             let imageEncodedString = imageData?.base64EncodedString()
             
             let model = CanvasModel(
@@ -56,8 +58,7 @@ extension PKCanvasControlable {
             do {
                 let data = try model.encode()
                 try data.write(to: url)
-                self.cacheDrawing = drawing
-                self._toast()
+                self.toastMessage()
             } catch {
                 print("CanvasModel Save 실패 : \(error)")
             }
@@ -65,7 +66,7 @@ extension PKCanvasControlable {
     }
     
     func load() {
-        guard let url = _directoryUrl else { return }
+        guard let url = directoryUrl else { return }
         
         queue.async {
             if FileManager.default.fileExists(atPath: url.path) {
@@ -78,33 +79,41 @@ extension PKCanvasControlable {
                         if let imageData = imageData, !imageData.isEmpty {
                             self.backgroundView.image = UIImage(data: imageData)
                         }
+                        self.setUndoCanvas(model.drawing)
                         self.canvasView.drawing = model.drawing
                     }
                 } catch {
                     print("CanvasModel Load 실패 : \(error)")
                 }
             } else {
-                self._alert()
+                self.alertMessage()
             }
         }
     }
     
     func add() {
-        self._add() { [weak backgroundView] (image) in
-            backgroundView?.image = image
+        self._add() { [weak self] (image) in
+            self?.setUndoBackgroundImage(image)
+            self?.backgroundView.image = image
         }
     }
     
     func undo() {
-        canvasView.undoManager?.undo()
+        guard let undoManager = undoManager, undoManager.canUndo else {
+            return
+        }
+        undoManager.undo()
     }
     
     func redo() {
-        canvasView.undoManager?.redo()
+        guard let undoManager = undoManager else { return }
+        guard undoManager.canRedo else { return }
+        
+        undoManager.redo()
     }
     
     func pen() {
-        canvasView.tool = _pan
+        canvasView.tool = _pen
     }
     
     func erase() {
@@ -112,10 +121,10 @@ extension PKCanvasControlable {
     }
 }
 
-// MARK: - Private
+// MARK: - Private Method
 
 extension PKCanvasControlable {
-    private var _pan: PKInkingTool {
+    private var _pen: PKInkingTool {
         return PKInkingTool(
             .pen,
             color: .black,
@@ -125,7 +134,7 @@ extension PKCanvasControlable {
     private var _eraser: PKEraserTool {
         return PKEraserTool(.bitmap)
     }
-    private var _directoryUrl: URL? {
+    private var directoryUrl: URL? {
         if !self.isStub {
             let urls = FileManager.default.urls(
                 for: .documentDirectory,
@@ -141,20 +150,42 @@ extension PKCanvasControlable {
             qos: .background
         )
     }
-    
     private func _add(completion: @escaping ImagePicker.ImagePickerCompletion) {
         guard let presentViewController = self.presentViewController else { return }
+        
         ImagePicker().present(
             to: presentViewController,
             completion: completion
         )
     }
+    
+    private func setUndoCanvas(_ newDrawing: PKDrawing) {
+        guard let undoManager = undoManager else { return }
+        guard undoManager.canUndo else { return }
+        
+        let oldDrawing = canvasView.drawing
+        undoManager.registerUndo(withTarget: self, handler: { (controlable) in
+            controlable.setUndoCanvas(oldDrawing)
+        })
+        canvasView.drawing = newDrawing
+    }
+    
+    private func setUndoBackgroundImage(_ newImage: UIImage?) {
+        guard let undoManager = undoManager else { return }
+        
+        let oldImage = backgroundView.image
+        undoManager.registerUndo(withTarget: self, handler: { (controlable) in
+            controlable.setUndoBackgroundImage(oldImage)
+        })
+        backgroundView.image = newImage
+    }
+    
 }
 
-// MARK: - Prviate Helper Method
+// MARK: - Prviate Alert Method
 
 extension PKCanvasControlable {
-    private func _toast() {
+    private func toastMessage() {
         guard let presentViewController = self.presentViewController else { return }
         
         DispatchQueue.main.async {
@@ -196,7 +227,7 @@ extension PKCanvasControlable {
         }
     }
     
-    private func _alert() {
+    private func alertMessage() {
         guard let presentViewController = self.presentViewController else { return }
         
         DispatchQueue.main.async {
