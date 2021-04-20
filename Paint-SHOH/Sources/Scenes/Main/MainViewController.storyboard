@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="VZp-nc-Gu1">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="uiH-B4-iYA" customClass="MainViewController" customModule="Paint_SHOH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ekd-Yv-GRO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afj-mX-nbn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="75"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-DH-qKa">
+                                        <rect key="frame" x="10" y="17.5" width="90" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lh-E5-e3K" customClass="IBButton" customModule="Paint_SHOH" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="9Lh-E5-e3K" secondAttribute="height" id="3aq-ge-mJr"/>
+                                                    <constraint firstAttribute="width" constant="40" id="e2s-XY-HXd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="SAVE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jdp-TC-0QX" customClass="IBButton" customModule="Paint_SHOH" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="Jdp-TC-0QX" secondAttribute="height" id="QyU-2a-0ay"/>
+                                                    <constraint firstAttribute="width" constant="40" id="ehm-hH-7D5"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="LOAD">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="ehl-WI-94y"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rg9-wn-qHz" customClass="IBButton" customModule="Paint_SHOH" customModuleProvider="target">
+                                        <rect key="frame" x="115" y="17.5" width="40" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="rg9-wn-qHz" secondAttribute="height" id="Fem-Xa-6Q6"/>
+                                            <constraint firstAttribute="width" constant="40" id="u6n-aP-t6a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="ADD">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cPP-de-j7L">
+                                        <rect key="frame" x="209" y="17.5" width="90" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jOC-qr-dCb" customClass="IBButton" customModule="Paint_SHOH" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="jOC-qr-dCb" secondAttribute="height" id="VFI-fJ-1S4"/>
+                                                    <constraint firstAttribute="width" constant="40" id="ZDo-yi-fBS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <state key="normal">
+                                                    <string key="title">←
+LEFTWARDS ARROW
+유니코드: U+2190, UTF-8: E2 86 90</string>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POz-du-vQJ" customClass="IBButton" customModule="Paint_SHOH" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Vwo-5T-DKt"/>
+                                                    <constraint firstAttribute="width" secondItem="POz-du-vQJ" secondAttribute="height" id="nyp-ox-8Y6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                                <state key="normal">
+                                                    <string key="title">→
+RIGHTWARDS ARROW
+유니코드: U+2192, UTF-8: E2 86 92</string>
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="LGW-KG-Nmh"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3Mz-QU-zaR">
+                                        <rect key="frame" x="314" y="17.5" width="90" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5s4-ox-ia2" customClass="IBButton" customModule="Paint_SHOH" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="5s4-ox-ia2" secondAttribute="height" id="V9L-6w-nnJ"/>
+                                                    <constraint firstAttribute="width" constant="40" id="vmO-T6-RnF"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <state key="normal" title="PEN">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yvk-L6-nrk" customClass="IBButton" customModule="Paint_SHOH" customModuleProvider="target">
+                                                <rect key="frame" x="50" y="0.0" width="40" height="40"/>
+                                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="Lb4-Px-WHQ"/>
+                                                    <constraint firstAttribute="width" secondItem="yvk-L6-nrk" secondAttribute="height" id="Ua4-is-5KB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                <state key="normal" title="ERASE">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="2sv-EN-CBp"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstItem="rg9-wn-qHz" firstAttribute="leading" secondItem="gTY-DH-qKa" secondAttribute="trailing" constant="15" id="GPI-Md-ih0"/>
+                                    <constraint firstItem="rg9-wn-qHz" firstAttribute="centerY" secondItem="afj-mX-nbn" secondAttribute="centerY" id="Ue5-pv-ciu"/>
+                                    <constraint firstItem="gTY-DH-qKa" firstAttribute="leading" secondItem="afj-mX-nbn" secondAttribute="leading" constant="10" id="YLE-La-PgM"/>
+                                    <constraint firstItem="3Mz-QU-zaR" firstAttribute="centerY" secondItem="afj-mX-nbn" secondAttribute="centerY" id="Zmh-Uz-baf"/>
+                                    <constraint firstAttribute="height" constant="75" id="p4C-EF-ak5"/>
+                                    <constraint firstItem="3Mz-QU-zaR" firstAttribute="leading" secondItem="cPP-de-j7L" secondAttribute="trailing" constant="15" id="pCZ-62-E5K"/>
+                                    <constraint firstAttribute="trailing" secondItem="3Mz-QU-zaR" secondAttribute="trailing" constant="10" id="ro5-fc-alj"/>
+                                    <constraint firstItem="cPP-de-j7L" firstAttribute="centerY" secondItem="afj-mX-nbn" secondAttribute="centerY" id="xH7-bP-Rhr"/>
+                                    <constraint firstItem="gTY-DH-qKa" firstAttribute="centerY" secondItem="afj-mX-nbn" secondAttribute="centerY" id="yWI-Ur-wcr"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3th-xB-BcL" customClass="PKCanvas" customModule="Paint_SHOH" customModuleProvider="target">
+                                <rect key="frame" x="5" y="124" width="404" height="733"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="DBw-0T-Jmu"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="afj-mX-nbn" firstAttribute="leading" secondItem="DBw-0T-Jmu" secondAttribute="leading" id="7AV-S0-eN1"/>
+                            <constraint firstItem="3th-xB-BcL" firstAttribute="top" secondItem="afj-mX-nbn" secondAttribute="bottom" constant="5" id="ApV-U8-wjw"/>
+                            <constraint firstItem="DBw-0T-Jmu" firstAttribute="bottom" secondItem="3th-xB-BcL" secondAttribute="bottom" constant="5" id="CkX-jD-38Q"/>
+                            <constraint firstItem="DBw-0T-Jmu" firstAttribute="trailing" secondItem="afj-mX-nbn" secondAttribute="trailing" id="bFX-iP-a5V"/>
+                            <constraint firstItem="DBw-0T-Jmu" firstAttribute="trailing" secondItem="3th-xB-BcL" secondAttribute="trailing" constant="5" id="eUx-rZ-Lhg"/>
+                            <constraint firstItem="3th-xB-BcL" firstAttribute="leading" secondItem="DBw-0T-Jmu" secondAttribute="leading" constant="5" id="tu1-mJ-dQD"/>
+                            <constraint firstItem="afj-mX-nbn" firstAttribute="top" secondItem="DBw-0T-Jmu" secondAttribute="top" id="un1-0T-4U3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addBtn" destination="rg9-wn-qHz" id="TjV-rP-a1P"/>
+                        <outlet property="canvasView" destination="3th-xB-BcL" id="sGX-T4-VMB"/>
+                        <outlet property="eraseBtn" destination="yvk-L6-nrk" id="fNZ-I5-KzC"/>
+                        <outlet property="loadBtn" destination="Jdp-TC-0QX" id="xVR-w4-lGc"/>
+                        <outlet property="penBtn" destination="5s4-ox-ia2" id="56L-Q1-2LF"/>
+                        <outlet property="redoBtn" destination="POz-du-vQJ" id="K7p-nz-Ton"/>
+                        <outlet property="saveBtn" destination="9Lh-E5-e3K" id="GjU-LE-713"/>
+                        <outlet property="undoBtn" destination="jOC-qr-dCb" id="pvt-Xa-hRu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PZv-pG-hVj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="66.666666666666671" y="114.50892857142857"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="5s4-ox-ia2">
+            <size key="intrinsicContentSize" width="30" height="27"/>
+        </designable>
+        <designable name="9Lh-E5-e3K">
+            <size key="intrinsicContentSize" width="31" height="27"/>
+        </designable>
+        <designable name="Jdp-TC-0QX">
+            <size key="intrinsicContentSize" width="33" height="27"/>
+        </designable>
+        <designable name="POz-du-vQJ">
+            <size key="intrinsicContentSize" width="312" height="84"/>
+        </designable>
+        <designable name="jOC-qr-dCb">
+            <size key="intrinsicContentSize" width="313" height="84"/>
+        </designable>
+        <designable name="rg9-wn-qHz">
+            <size key="intrinsicContentSize" width="30" height="27"/>
+        </designable>
+        <designable name="yvk-L6-nrk">
+            <size key="intrinsicContentSize" width="36" height="26"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -14,21 +14,24 @@
 		CB3F0CB1262D2FE500D6CEA3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CB0262D2FE500D6CEA3 /* MainViewController.swift */; };
 		CB3F0CB6262D2FE500D6CEA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0CB5262D2FE500D6CEA3 /* Assets.xcassets */; };
 		CB3F0CB9262D2FE500D6CEA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0CB7262D2FE500D6CEA3 /* LaunchScreen.storyboard */; };
-		CB3F0CC4262D2FE600D6CEA3 /* Paint_SHOHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CC3262D2FE600D6CEA3 /* Paint_SHOHTests.swift */; };
 		CB3F0CCF262D2FE600D6CEA3 /* Paint_SHOHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0CCE262D2FE600D6CEA3 /* Paint_SHOHUITests.swift */; };
-		CB3F0D1D262D34B100D6CEA3 /* SPMSHOHProxy in Frameworks */ = {isa = PBXBuildFile; productRef = CB3F0D1C262D34B100D6CEA3 /* SPMSHOHProxy */; };
+		CB3F0D1D262D34B100D6CEA3 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = CB3F0D1C262D34B100D6CEA3 /* SwiftPackageProductDependency */; };
 		CB3F0D2D262D354200D6CEA3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D2C262D354200D6CEA3 /* AppCoordinator.swift */; };
 		CB3F0D3A262D37DC00D6CEA3 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D34262D357000D6CEA3 /* Coordinator.swift */; };
 		CB3F0D3E262D37EF00D6CEA3 /* ObservableType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D36262D357E00D6CEA3 /* ObservableType+Extensions.swift */; };
 		CB3F0D47262D382000D6CEA3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D43262D380F00D6CEA3 /* BaseViewController.swift */; };
 		CB3F0D56262D38B400D6CEA3 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D55262D38B400D6CEA3 /* MainCoordinator.swift */; };
 		CB3F0D5E262D3A2100D6CEA3 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D5D262D3A2100D6CEA3 /* BaseNavigationController.swift */; };
-		CB3F0D67262D3B2900D6CEA3 /* ControlHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D66262D3B2900D6CEA3 /* ControlHeaderView.swift */; };
-		CB3F0D6D262D3CB200D6CEA3 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D6C262D3CB200D6CEA3 /* CanvasView.swift */; };
 		CB3F0D75262D3CC500D6CEA3 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB3F0D74262D3CC500D6CEA3 /* BaseView.swift */; };
-		CB3F0D8B262D3F7400D6CEA3 /* CanvasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CB3F0D8A262D3F7400D6CEA3 /* CanvasView.xib */; };
-		CBE62F49262D50D10019EF41 /* ControlHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBE62F48262D50D10019EF41 /* ControlHeaderView.xib */; };
+		CB553B72262EE56D00469A60 /* PKCanvasControlable+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB553B71262EE56D00469A60 /* PKCanvasControlable+Rx.swift */; };
 		CBE62F4E262D568B0019EF41 /* IBClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62F4D262D568B0019EF41 /* IBClass.swift */; };
+		CBE62F61262D6C2E0019EF41 /* PKCanvasControlable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62F60262D6C2E0019EF41 /* PKCanvasControlable.swift */; };
+		CBE62F6F262D80610019EF41 /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBE62F6E262D80610019EF41 /* MainViewController.storyboard */; };
+		CBE62F81262D921D0019EF41 /* PKCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62F80262D921D0019EF41 /* PKCanvas.swift */; };
+		CBE62FBB262D95B10019EF41 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62FBA262D95B10019EF41 /* ImagePicker.swift */; };
+		CBE62FD1262DDB800019EF41 /* CanvasModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62FD0262DDB800019EF41 /* CanvasModel.swift */; };
+		CBE62FD9262E035A0019EF41 /* MainViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62FD8262E03590019EF41 /* MainViewReactor.swift */; };
+		CBE62FE2262E04A10019EF41 /* PKCanvasControlableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBE62FE1262E04A10019EF41 /* PKCanvasControlableTests.swift */; };
 		DF57839A67713E63FABE3534 /* Pods_Paint_SHOHTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C5A7D1042465961C449243D /* Pods_Paint_SHOHTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +68,6 @@
 		CB3F0CB8262D2FE500D6CEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB3F0CBA262D2FE500D6CEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB3F0CBF262D2FE600D6CEA3 /* Paint-SHOHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paint-SHOHTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB3F0CC3262D2FE600D6CEA3 /* Paint_SHOHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_SHOHTests.swift; sourceTree = "<group>"; };
 		CB3F0CC5262D2FE600D6CEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB3F0CCA262D2FE600D6CEA3 /* Paint-SHOHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Paint-SHOHUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3F0CCE262D2FE600D6CEA3 /* Paint_SHOHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint_SHOHUITests.swift; sourceTree = "<group>"; };
@@ -76,12 +78,16 @@
 		CB3F0D43262D380F00D6CEA3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		CB3F0D55262D38B400D6CEA3 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		CB3F0D5D262D3A2100D6CEA3 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
-		CB3F0D66262D3B2900D6CEA3 /* ControlHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlHeaderView.swift; sourceTree = "<group>"; };
-		CB3F0D6C262D3CB200D6CEA3 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		CB3F0D74262D3CC500D6CEA3 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
-		CB3F0D8A262D3F7400D6CEA3 /* CanvasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CanvasView.xib; sourceTree = "<group>"; };
-		CBE62F48262D50D10019EF41 /* ControlHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ControlHeaderView.xib; sourceTree = "<group>"; };
+		CB553B71262EE56D00469A60 /* PKCanvasControlable+Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PKCanvasControlable+Rx.swift"; sourceTree = "<group>"; };
 		CBE62F4D262D568B0019EF41 /* IBClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBClass.swift; sourceTree = "<group>"; };
+		CBE62F60262D6C2E0019EF41 /* PKCanvasControlable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvasControlable.swift; sourceTree = "<group>"; };
+		CBE62F6E262D80610019EF41 /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
+		CBE62F80262D921D0019EF41 /* PKCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvas.swift; sourceTree = "<group>"; };
+		CBE62FBA262D95B10019EF41 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		CBE62FD0262DDB800019EF41 /* CanvasModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasModel.swift; sourceTree = "<group>"; };
+		CBE62FD8262E03590019EF41 /* MainViewReactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewReactor.swift; sourceTree = "<group>"; };
+		CBE62FE1262E04A10019EF41 /* PKCanvasControlableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PKCanvasControlableTests.swift; sourceTree = "<group>"; };
 		CC10C82B15A92A4A960C047F /* Pods_Paint_SHOHUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Paint_SHOHUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5DFD66AC39DF341F03184DE /* Pods-Paint-SHOHUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Paint-SHOHUITests.debug.xcconfig"; path = "Target Support Files/Pods-Paint-SHOHUITests/Pods-Paint-SHOHUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -91,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3F0D1D262D34B100D6CEA3 /* SPMSHOHProxy in Frameworks */,
+				CB3F0D1D262D34B100D6CEA3 /* BuildFile in Frameworks */,
 				6F1B69B3BC87CB4DC293F5AA /* Pods_Paint_SHOH.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,7 +180,7 @@
 		CB3F0CC2262D2FE600D6CEA3 /* Paint-SHOHTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB3F0CC3262D2FE600D6CEA3 /* Paint_SHOHTests.swift */,
+				CBE62FE0262E04880019EF41 /* Control */,
 				CB3F0CC5262D2FE600D6CEA3 /* Info.plist */,
 			);
 			path = "Paint-SHOHTests";
@@ -221,9 +227,8 @@
 		CB3F0D24262D350400D6CEA3 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				CBE62F7F262D92100019EF41 /* PKCanvas */,
 				CB3F0D42262D380A00D6CEA3 /* Base */,
-				CB3F0D6B262D3B7000D6CEA3 /* Canvas */,
-				CB3F0D65262D3AF000D6CEA3 /* ControlHeader */,
 				CB3F0D4B262D383900D6CEA3 /* Main */,
 			);
 			path = Scenes;
@@ -232,6 +237,7 @@
 		CB3F0D25262D350B00D6CEA3 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				CBE62FCF262DDB760019EF41 /* Models */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -239,6 +245,7 @@
 		CB3F0D32262D355B00D6CEA3 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				CBE62FB9262D95A40019EF41 /* Managers */,
 				CB3F0D35262D357800D6CEA3 /* Extensions */,
 				CB3F0D33262D356400D6CEA3 /* Protocols */,
 			);
@@ -249,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				CB3F0D34262D357000D6CEA3 /* Coordinator.swift */,
+				CBE62F60262D6C2E0019EF41 /* PKCanvasControlable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -257,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				CB3F0D36262D357E00D6CEA3 /* ObservableType+Extensions.swift */,
+				CB553B71262EE56D00469A60 /* PKCanvasControlable+Rx.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -275,28 +284,44 @@
 		CB3F0D4B262D383900D6CEA3 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				CBE62F6E262D80610019EF41 /* MainViewController.storyboard */,
 				CB3F0D55262D38B400D6CEA3 /* MainCoordinator.swift */,
 				CB3F0CB0262D2FE500D6CEA3 /* MainViewController.swift */,
+				CBE62FD8262E03590019EF41 /* MainViewReactor.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		CB3F0D65262D3AF000D6CEA3 /* ControlHeader */ = {
+		CBE62F7F262D92100019EF41 /* PKCanvas */ = {
 			isa = PBXGroup;
 			children = (
-				CB3F0D66262D3B2900D6CEA3 /* ControlHeaderView.swift */,
-				CBE62F48262D50D10019EF41 /* ControlHeaderView.xib */,
+				CBE62F80262D921D0019EF41 /* PKCanvas.swift */,
 			);
-			path = ControlHeader;
+			path = PKCanvas;
 			sourceTree = "<group>";
 		};
-		CB3F0D6B262D3B7000D6CEA3 /* Canvas */ = {
+		CBE62FB9262D95A40019EF41 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				CB3F0D6C262D3CB200D6CEA3 /* CanvasView.swift */,
-				CB3F0D8A262D3F7400D6CEA3 /* CanvasView.xib */,
+				CBE62FBA262D95B10019EF41 /* ImagePicker.swift */,
 			);
-			path = Canvas;
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		CBE62FCF262DDB760019EF41 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CBE62FD0262DDB800019EF41 /* CanvasModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CBE62FE0262E04880019EF41 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				CBE62FE1262E04A10019EF41 /* PKCanvasControlableTests.swift */,
+			);
+			path = Control;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -318,7 +343,7 @@
 			);
 			name = "Paint-SHOH";
 			packageProductDependencies = (
-				CB3F0D1C262D34B100D6CEA3 /* SPMSHOHProxy */,
+				CB3F0D1C262D34B100D6CEA3 /* SwiftPackageProductDependency */,
 			);
 			productName = "Paint-SHOH";
 			productReference = CB3F0CA9262D2FE500D6CEA3 /* Paint-SHOH.app */;
@@ -352,7 +377,6 @@
 				CB3F0CC6262D2FE600D6CEA3 /* Sources */,
 				CB3F0CC7262D2FE600D6CEA3 /* Frameworks */,
 				CB3F0CC8262D2FE600D6CEA3 /* Resources */,
-				627A537737E4142D24FD3675 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -396,7 +420,7 @@
 			);
 			mainGroup = CB3F0CA0262D2FE500D6CEA3;
 			packageReferences = (
-				CB3F0D1B262D34B100D6CEA3 /* XCRemoteSwiftPackageReference "SPMSHOHProxy" */,
+				CB3F0D1B262D34B100D6CEA3 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = CB3F0CAA262D2FE500D6CEA3 /* Products */;
 			projectDirPath = "";
@@ -414,10 +438,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE62F6F262D80610019EF41 /* MainViewController.storyboard in Resources */,
 				CB3F0CB9262D2FE500D6CEA3 /* LaunchScreen.storyboard in Resources */,
 				CB3F0CB6262D2FE500D6CEA3 /* Assets.xcassets in Resources */,
-				CB3F0D8B262D3F7400D6CEA3 /* CanvasView.xib in Resources */,
-				CBE62F49262D50D10019EF41 /* ControlHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,23 +517,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		627A537737E4142D24FD3675 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Paint-SHOHUITests/Pods-Paint-SHOHUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Paint-SHOHUITests/Pods-Paint-SHOHUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Paint-SHOHUITests/Pods-Paint-SHOHUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9A61AD45CFC13B88D4C94A9C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -562,17 +568,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBE62FD9262E035A0019EF41 /* MainViewReactor.swift in Sources */,
 				CB3F0D2D262D354200D6CEA3 /* AppCoordinator.swift in Sources */,
 				CB3F0D56262D38B400D6CEA3 /* MainCoordinator.swift in Sources */,
+				CBE62F81262D921D0019EF41 /* PKCanvas.swift in Sources */,
 				CB3F0CB1262D2FE500D6CEA3 /* MainViewController.swift in Sources */,
+				CB553B72262EE56D00469A60 /* PKCanvasControlable+Rx.swift in Sources */,
 				CB3F0D75262D3CC500D6CEA3 /* BaseView.swift in Sources */,
 				CB3F0D3E262D37EF00D6CEA3 /* ObservableType+Extensions.swift in Sources */,
 				CB3F0D3A262D37DC00D6CEA3 /* Coordinator.swift in Sources */,
 				CB3F0D5E262D3A2100D6CEA3 /* BaseNavigationController.swift in Sources */,
 				CB3F0CAD262D2FE500D6CEA3 /* AppDelegate.swift in Sources */,
-				CB3F0D67262D3B2900D6CEA3 /* ControlHeaderView.swift in Sources */,
+				CBE62FD1262DDB800019EF41 /* CanvasModel.swift in Sources */,
 				CBE62F4E262D568B0019EF41 /* IBClass.swift in Sources */,
-				CB3F0D6D262D3CB200D6CEA3 /* CanvasView.swift in Sources */,
+				CBE62FBB262D95B10019EF41 /* ImagePicker.swift in Sources */,
+				CBE62F61262D6C2E0019EF41 /* PKCanvasControlable.swift in Sources */,
 				CB3F0D47262D382000D6CEA3 /* BaseViewController.swift in Sources */,
 				CB3F0CAF262D2FE500D6CEA3 /* SceneDelegate.swift in Sources */,
 			);
@@ -582,7 +592,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB3F0CC4262D2FE600D6CEA3 /* Paint_SHOHTests.swift in Sources */,
+				CBE62FE2262E04A10019EF41 /* PKCanvasControlableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -911,7 +921,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CB3F0D1B262D34B100D6CEA3 /* XCRemoteSwiftPackageReference "SPMSHOHProxy" */ = {
+		CB3F0D1B262D34B100D6CEA3 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SH-OH/SPMSHOHProxy.git";
 			requirement = {
@@ -922,9 +932,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CB3F0D1C262D34B100D6CEA3 /* SPMSHOHProxy */ = {
+		CB3F0D1C262D34B100D6CEA3 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CB3F0D1B262D34B100D6CEA3 /* XCRemoteSwiftPackageReference "SPMSHOHProxy" */;
+			package = CB3F0D1B262D34B100D6CEA3 /* RemoteSwiftPackageReference */;
 			productName = SPMSHOHProxy;
 		};
 /* End XCSwiftPackageProductDependency section */
