@@ -10,7 +10,6 @@ import PencilKit
 final class PKCanvas: UIView, PKCanvasControlable {
     let backgroundView = PKCanvas.initBackgroundView()
     let canvasView = PKCanvas.initCanvas()
-    var cacheDrawing: PKDrawing?
     var presentViewController: BaseViewController?
     let isStub: Bool = false
     
