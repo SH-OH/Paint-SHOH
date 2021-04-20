@@ -51,3 +51,12 @@ extension ImagePicker: UIImagePickerControllerDelegate {
 // MAKR: - UINavigationControllerDelegate
 
 extension ImagePicker: UINavigationControllerDelegate {}
+
+extension ImagePicker {
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .all
+    }
+}
