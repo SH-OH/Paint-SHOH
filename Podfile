@@ -18,10 +18,6 @@ def ui_pods
   pod 'SnapKit'
 end
 
-def test_pods
-  pod 'RxExpect', :git => 'https://github.com/SH-OH/RxExpect.git', :branch => 'develop'
-end
-
 target 'Paint-SHOH' do
     default_pods
     ui_pods
@@ -30,11 +26,10 @@ end
 target 'Paint-SHOHTests' do
     inherit! :search_paths
     default_pods
-    test_pods
 end
 
 target 'Paint-SHOHUITests' do
-    test_pods
+
 end
 
 post_install do |installer|
