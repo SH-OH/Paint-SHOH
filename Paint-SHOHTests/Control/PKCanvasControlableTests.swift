@@ -11,40 +11,48 @@ import PencilKit
 
 class PKCanvasControlableTests: XCTestCase {
     
-    final class PKCanvasMock: PKCanvasControlable {
+    final class StubPKCanvas: UIView, PKCanvasControlable {
         var presentViewController: BaseViewController?
-        var backgroundView: UIImageView = PKCanvasMock.initBackgroundView()
-        var canvasView: PKCanvasView = PKCanvasMock.initCanvas()
-        var cacheDrawing: PKDrawing?
+        var backgroundView: UIImageView = StubPKCanvas.initBackgroundView()
+        var canvasView: PKCanvasView = StubPKCanvas.initCanvas()
         let isStub: Bool = true
     }
     
-    var canvas: PKCanvasMock!
+    var canvas: StubPKCanvas!
     
     override func setUpWithError() throws {
-        canvas = PKCanvasMock()
+        canvas = StubPKCanvas()
+        let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow })!
+        window.addSubview(canvas)
     }
 
     override func tearDownWithError() throws {
+        canvas.removeFromSuperview()
         canvas = nil
     }
     
     func test_undo() {
-        if !canvas.canvasView.undoManager!.canUndo {
-            XCTAssertTrue(false)
-        } else {
-            canvas.undo()
-            XCTAssertTrue(true)
-        }
+        let mockNewDrawing = self.makeMockDrawing()
+        self.setUndoCanvas(mockNewDrawing)
+        canvas.canvasView.drawing = mockNewDrawing
+        
+        let prevDrawingCount = canvas.canvasView.drawing.strokes.count
+        
+        canvas.undo()
+        
+        let currentDrawingCount = canvas.canvasView.drawing.strokes.count
+        XCTAssertNotEqual(prevDrawingCount, currentDrawingCount)
     }
     
     func test_redo() {
-        if !canvas.canvasView.undoManager!.canRedo {
-            XCTAssertTrue(false)
-        } else {
-            canvas.redo()
-            XCTAssertTrue(true)
-        }
+        test_undo()
+        
+        let prevDrawing = canvas.canvasView.drawing
+        
+        canvas.redo()
+        
+        let currentDrawing = canvas.canvasView.drawing
+        XCTAssertNotEqual(prevDrawing, currentDrawing)
     }
     
     func test_pen() {
@@ -62,4 +70,35 @@ class PKCanvasControlableTests: XCTestCase {
         let eraserTool = PKEraserTool(.bitmap)
         XCTAssertTrue(canvas.canvasView.tool as! PKEraserTool == eraserTool)
     }
+}
+
+// MARK: - Make Mock Helper Method
+
+extension PKCanvasControlableTests {
+    private func makeMockDrawing() -> PKDrawing {
+        var newDrawingStrokes = [PKStroke]()
+        let newPoint = PKStrokePoint(
+            location: .zero,
+            timeOffset: .init(1),
+            size: CGSize(width: 5,height: 5),
+            opacity: CGFloat(1),
+            force: .init(1),
+            azimuth: .init(1),
+            altitude: .init(1)
+        )
+        let newPath = PKStrokePath(controlPoints: [newPoint], creationDate: Date())
+        newDrawingStrokes.append(PKStroke(ink: PKInk(.pen, color: .black), path: newPath))
+        return PKDrawing(strokes: newDrawingStrokes)
+    }
+    
+    private func setUndoCanvas(_ newDrawing: PKDrawing) {
+        guard let undoManager = canvas.undoManager else { return }
+        
+        let oldDrawing = canvas.canvasView.drawing
+        undoManager.registerUndo(withTarget: self, handler: { (controlable) in
+            controlable.setUndoCanvas(oldDrawing)
+        })
+        canvas.canvasView.drawing = newDrawing
+    }
+    
 }
