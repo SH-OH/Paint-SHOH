@@ -99,9 +99,9 @@ extension PKCanvasControlable {
     }
     
     func undo() {
-        guard let undoManager = undoManager, undoManager.canUndo else {
-            return
-        }
+        guard let undoManager = undoManager else { return }
+        guard undoManager.canUndo else { return }
+        
         undoManager.undo()
     }
     
